@@ -17,23 +17,45 @@ public class TrianguloTest {
 
     @Test
     void testVerificaSeEquilatero(){
-        String equilatero = triangulo.verificaTriangulo(3,3,3);
+        // GIVEN
+        int A = 3;
+        int B = 3;
+        int C = 3;
+
+        //WHEN
+        String equilatero = triangulo.verificaTriangulo(A,B,C);
         String esperado = "O triangulo eh equilatero";
 
+        //THEN
         assertEquals(esperado,equilatero);
     }
 
     @Test
     void testVerificaSeIsoceles(){
-        String equilatero = triangulo.verificaTriangulo(2,3,2);
+        // GIVEN
+        int A = 2;
+        int B = 3;
+        int C = 2;
+
+        //WHEN
+        String equilatero = triangulo.verificaTriangulo(A,B,C);
         String esperado = "O triangulo eh isosceles";
 
+        //THEN
         assertEquals(esperado,equilatero);
     }
 
     @Test
     void testVerificaSeNaoETriangulo(){
-        String equilatero = triangulo.verificaTriangulo(1,2,3);
+        // GIVEN
+        int A = 1;
+        int B = 2;
+        int C = 3;
+
+        //WHEN
+        String equilatero = triangulo.verificaTriangulo(A,B,C);
+
+        //THEN
         String esperado = "Nao eh um triangulo";
 
         assertEquals(esperado,equilatero);
@@ -41,9 +63,17 @@ public class TrianguloTest {
 
     @Test
     void testVerificaSeNaoEEscaleno(){
-        String equilatero = triangulo.verificaTriangulo(7,11,9);
+        // GIVEN
+        int A = 7;
+        int B = 11;
+        int C = 9;
+
+        //WHEN
+        String equilatero = triangulo.verificaTriangulo(A,B,C);
+
         String esperado = "O triangulo eh escaleno";
 
+        //THEN
         assertEquals(esperado,equilatero);
     }
 }
